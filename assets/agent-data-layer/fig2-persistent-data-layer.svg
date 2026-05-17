@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker><style>.title{font:700 32px Arial,'Microsoft YaHei',sans-serif;fill:#0f172a}.sub{font:18px Arial,'Microsoft YaHei',sans-serif;fill:#334155}.h{font:700 18px Arial,'Microsoft YaHei',sans-serif;fill:#0f172a}.t{font:14px Arial,'Microsoft YaHei',sans-serif;fill:#334155}.s{font:12px Arial,'Microsoft YaHei',sans-serif;fill:#475569}.box{fill:#fff;stroke:#cbd5e1;stroke-width:2;rx:16}.blue{fill:#eff6ff;stroke:#60a5fa}.teal{fill:#ecfdf5;stroke:#34d399}.purple{fill:#faf5ff;stroke:#a78bfa}.orange{fill:#fff7ed;stroke:#fb923c}.arrow{stroke:#2563eb;stroke-width:3;fill:none;marker-end:url(#arrow)}.dash{stroke:#2563eb;stroke-width:2;stroke-dasharray:7 6;fill:none;marker-end:url(#arrow)}</style></defs>
+  <rect width="1600" height="1000" fill="#fff"/>
+  <text x="60" y="62" class="title">图 2：Agent Data Layer 的持久化数据层 / Persistent Data Layer</text>
+  <text x="60" y="96" class="sub">知识、状态、Memory、Skill 如何被组织成可查询、可更新的数据资产</text>
+
+  <g transform="translate(55,145)"><rect class="box blue" width="250" height="420"/><text x="20" y="40" class="h">数据写入源 / Write Sources</text><text x="20" y="85" class="s">• Agent / 应用写入</text><text x="20" y="118" class="s">• 用户交互与反馈</text><text x="20" y="151" class="s">• 外部系统 / API</text><text x="20" y="184" class="s">• 文档 / 历史数据导入</text><text x="20" y="217" class="s">• 模型推理产物</text><text x="20" y="250" class="s">• IoT / 设备 / 事件流</text><text x="20" y="310" class="t">写入前需完成：</text><text x="20" y="340" class="s">解析、抽取、对齐、权限标注、质量校验</text></g>
+  <path class="arrow" d="M315 355 H375"/>
+
+  <g transform="translate(390,125)"><rect class="box" width="780" height="610"/><text x="24" y="42" class="h">核心资产 / Core Data Assets</text><text x="24" y="72" class="s">慢变数据：知识、偏好、Skills；快变数据：状态、事件、任务轨迹</text>
+    <g transform="translate(28,105)">
+      <rect class="blue" width="230" height="140" rx="14"/><text x="16" y="30" class="h">A. Facts / Knowledge Base</text><text x="16" y="58" class="s">事实 / 知识库</text><text x="16" y="88" class="s">产品说明、规则、FAQ、文档事实</text><text x="16" y="116" class="s">查询：事实检索、属性查找、过滤聚合</text>
+      <rect x="260" class="teal" width="230" height="140" rx="14"/><text x="276" y="30" class="h">B. Event & State Store</text><text x="276" y="58" class="s">事件与实时状态库</text><text x="276" y="88" class="s">会话状态、设备状态、位置、事件流</text><text x="276" y="116" class="s">查询：最新状态、时间窗口、告警条件</text>
+      <rect x="520" class="purple" width="230" height="140" rx="14"/><text x="536" y="30" class="h">C. Vector / MM Index</text><text x="536" y="58" class="s">向量 / 多模态索引</text><text x="536" y="88" class="s">文本、图片、音频、视频 embedding</text><text x="536" y="116" class="s">查询：语义相似、RAG、多模态匹配</text>
+      <rect y="175" class="orange" width="230" height="140" rx="14"/><text x="16" y="205" class="h">D. Graph / Relation Store</text><text x="16" y="233" class="s">图关系库</text><text x="16" y="263" class="s">实体关系、依赖、血缘、知识图谱</text><text x="16" y="291" class="s">查询：路径、邻居、子图、关系约束</text>
+      <rect x="260" y="175" class="blue" width="230" height="140" rx="14"/><text x="276" y="205" class="h">E. Memory Store</text><text x="276" y="233" class="s">情景 / 语义 / 用户偏好 / 任务记忆</text><text x="276" y="263" class="s">写入、更新、合并、遗忘、压缩</text><text x="276" y="291" class="s">查询：近期回忆、偏好、任务经验</text>
+      <rect x="520" y="175" class="teal" width="230" height="140" rx="14"/><text x="536" y="205" class="h">F. Skill / Workflow Store</text><text x="536" y="233" class="s">技能 / 工作流库</text><text x="536" y="263" class="s">工具描述、流程模板、执行策略</text><text x="536" y="291" class="s">查询：技能发现、能力匹配、流程解析</text>
+    </g>
+    <g transform="translate(28,475)"><rect class="box teal" width="724" height="95"/><text x="18" y="36" class="h">统一系统属性 / System Properties</text><text x="18" y="66" class="s">Queryable | Updatable | Versioned | Permission-aware | Provenance-aware | Auditable | Cost-aware</text></g>
+  </g>
+  <path class="arrow" d="M1180 355 H1235"/>
+  <g transform="translate(1245,145)"><rect class="box purple" width="300" height="420"/><text x="20" y="40" class="h">数据消费者 / Consumers</text><text x="20" y="85" class="s">• Context Assembly</text><text x="20" y="118" class="s">• Agent Runtime</text><text x="20" y="151" class="s">• Analytics & Evaluation</text><text x="20" y="184" class="s">• Offline Learning</text><text x="20" y="217" class="s">• Post-training Data</text><text x="20" y="275" class="t">核心目标：</text><text x="20" y="305" class="s">把数据资产转化为当前任务可用的 Context、Memory、State 与 Skills。</text></g>
+
+  <g transform="translate(70,795)"><rect class="box orange" width="1460" height="110"/><text x="24" y="38" class="h">关键设计挑战与权衡 / Key Design Challenges & Trade-offs</text><text x="24" y="72" class="s">Data Model | Update Frequency | Consistency | Retrieval Latency | Freshness | Storage Cost | Privacy & Security | Operational Complexity</text></g>
+</svg>
