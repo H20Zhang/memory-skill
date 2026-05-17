@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker>
+    <style>
+      .title{font:700 34px Arial,"Microsoft YaHei",sans-serif;fill:#0f172a}.sub{font:18px Arial,"Microsoft YaHei",sans-serif;fill:#334155}.h{font:700 19px Arial,"Microsoft YaHei",sans-serif;fill:#0f172a}.t{font:14px Arial,"Microsoft YaHei",sans-serif;fill:#334155}.s{font:12px Arial,"Microsoft YaHei",sans-serif;fill:#475569}.box{fill:#fff;stroke:#bfdbfe;stroke-width:2;rx:18}.blue{fill:#eff6ff;stroke:#60a5fa}.teal{fill:#ecfdf5;stroke:#34d399}.purple{fill:#faf5ff;stroke:#a78bfa}.orange{fill:#fff7ed;stroke:#fb923c}.band{fill:#f8fafc;stroke:#cbd5e1;rx:16}.arrow{stroke:#2563eb;stroke-width:3;fill:none;marker-end:url(#arrow)}.dash{stroke:#2563eb;stroke-width:2;stroke-dasharray:7 6;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1600" height="1000" fill="#ffffff"/>
+  <text x="60" y="62" class="title">图 1：Agent Data Layer 宏观架构总览 / Macro Architecture Overview</text>
+  <text x="60" y="96" class="sub">从原始数据到持久化知识层、在线 Context 装配、Agent Runtime 与反馈闭环</text>
+
+  <g transform="translate(45,145)">
+    <rect class="box blue" width="205" height="360"/>
+    <text x="18" y="36" class="h">1. 数据源 / 写入源</text>
+    <text x="18" y="65" class="t">Data Sources / Write Sources</text>
+    <text x="18" y="105" class="s">• 用户交互 / 对话</text><text x="18" y="132" class="s">• App / 设备事件</text><text x="18" y="159" class="s">• 工具日志 / 任务轨迹</text><text x="18" y="186" class="s">• IoT / 传感器 / 车机</text><text x="18" y="213" class="s">• 文档 / 图片 / 音视频</text><text x="18" y="240" class="s">• 企业数据库 / API</text><text x="18" y="267" class="s">• 离线 ETL / 模型输出</text>
+  </g>
+  <path class="arrow" d="M255 325 H305"/>
+  <g transform="translate(310,145)">
+    <rect class="box teal" width="220" height="360"/>
+    <text x="18" y="36" class="h">2. 摄取与处理层</text>
+    <text x="18" y="65" class="t">Ingestion & Processing</text>
+    <text x="18" y="105" class="s">• Connectors / CDC / Stream</text><text x="18" y="132" class="s">• Batch ETL / Cleaning</text><text x="18" y="159" class="s">• 解析 / 抽取 / 标准化</text><text x="18" y="186" class="s">• Entity Linking / 对齐</text><text x="18" y="213" class="s">• Embedding Generation</text><text x="18" y="240" class="s">• Indexing / Sharding</text><text x="18" y="267" class="s">• 权限 / 血缘 / 质量标注</text>
+  </g>
+  <path class="arrow" d="M535 325 H585"/>
+  <g transform="translate(590,120)">
+    <rect class="box" width="390" height="410"/>
+    <text x="24" y="42" class="h">3. 持久化数据层 / Persistent Data Layer</text>
+    <text x="24" y="73" class="t">六大核心资产 / Six Core Assets</text>
+    <g transform="translate(22,105)">
+      <rect class="blue" width="110" height="86" rx="12"/><text x="12" y="30" class="s">Facts / KB</text><text x="12" y="55" class="s">事实知识</text>
+      <rect x="125" class="teal" width="110" height="86" rx="12"/><text x="137" y="30" class="s">State Store</text><text x="137" y="55" class="s">实时状态</text>
+      <rect x="250" class="purple" width="110" height="86" rx="12"/><text x="262" y="30" class="s">Vector Index</text><text x="262" y="55" class="s">多模态索引</text>
+      <rect y="105" class="orange" width="110" height="86" rx="12"/><text x="12" y="135" class="s">Graph Store</text><text x="12" y="160" class="s">图关系</text>
+      <rect x="125" y="105" class="blue" width="110" height="86" rx="12"/><text x="137" y="135" class="s">Memory</text><text x="137" y="160" class="s">记忆存储</text>
+      <rect x="250" y="105" class="teal" width="110" height="86" rx="12"/><text x="262" y="135" class="s">Skill / WF</text><text x="262" y="160" class="s">技能工作流</text>
+    </g>
+    <text x="24" y="360" class="s">Queryable | Updatable | Versioned | Permission-aware | Provenance-aware</text>
+  </g>
+  <path class="arrow" d="M985 325 H1035"/>
+  <g transform="translate(1040,145)">
+    <rect class="box purple" width="230" height="360"/>
+    <text x="18" y="36" class="h">4. 在线 Context 层</text>
+    <text x="18" y="65" class="t">Online Context Layer</text>
+    <text x="18" y="105" class="s">• Task Understanding</text><text x="18" y="132" class="s">• Query Rewrite</text><text x="18" y="159" class="s">• Retrieval Orchestration</text><text x="18" y="186" class="s">• Rerank / Filter</text><text x="18" y="213" class="s">• Evidence Fusion</text><text x="18" y="240" class="s">• Compression / Budget</text><text x="18" y="267" class="s">• Context Pack Builder</text>
+  </g>
+  <path class="arrow" d="M1275 325 H1325"/>
+  <g transform="translate(1330,145)">
+    <rect class="box teal" width="220" height="360"/>
+    <text x="18" y="36" class="h">5. Agent Runtime</text>
+    <text x="18" y="65" class="t">Model / Agent Loop</text>
+    <text x="18" y="105" class="s">• 规划 / 推理 / 决策</text><text x="18" y="132" class="s">• Tool Orchestration</text><text x="18" y="159" class="s">• App / OS / IoT 执行</text><text x="18" y="186" class="s">• Response Generation</text><text x="18" y="213" class="s">• Optional Memory Write-back</text>
+  </g>
+
+  <g transform="translate(990,575)">
+    <rect class="box blue" width="560" height="170"/>
+    <text x="22" y="38" class="h">6. 反馈 / 评测 / 演进层 / Feedback, Evaluation & Evolution</text>
+    <text x="22" y="78" class="s">• 成功 / 失败归因    • 质量监控 / KPI    • A/B Testing</text>
+    <text x="22" y="108" class="s">• Memory 更新 / 遗忘    • Skill 归纳    • 策略与架构演进</text>
+    <text x="22" y="138" class="s">Feedback Loop: reprocess, reindex, update memory, evolve policies and skills</text>
+  </g>
+  <path class="dash" d="M1320 575 C1240 535,1030 545,820 555 C650 565,500 545,420 510"/>
+
+  <g transform="translate(55,785)">
+    <rect class="band" width="700" height="90"/>
+    <text x="20" y="35" class="h">跨域治理 / Cross-cutting Governance</text>
+    <text x="20" y="65" class="s">可查询、可更新、可版本化、权限感知、溯源感知、隐私安全、合规审计</text>
+  </g>
+  <g transform="translate(805,785)">
+    <rect class="band" width="700" height="90"/>
+    <text x="20" y="35" class="h">系统权衡 / System Trade-offs</text>
+    <text x="20" y="65" class="s">Latency | Quality | Cost | Freshness | Consistency | Personalization | Operational Complexity</text>
+  </g>
+  <text x="60" y="935" class="s">说明：本图为宏观总览；持久化数据层与在线 Context 层是后续展开的两大核心子系统。</text>
+</svg>
